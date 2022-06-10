@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #182C51;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.moon {
+  position: absolute;
+  background-color: #182C51;
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+
+.sun {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  background-color: #C7938B;
+  height: 256px;
+  width: 256px;
+  border-radius: 50%;
+  animation: 3.2s moviment linear infinite alternate;
+}
+
+@keyframes moviment {
+  0% {
+    top: 20px;
+    left: -20px;
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 10px #C7938B, 0 0 100px 8px #C7938B;
+  }
+  100% {
+    top: -20px;
+    left: 20px;
+    box-shadow: none;
+  }
+}
